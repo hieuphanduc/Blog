@@ -9,39 +9,74 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- js -->
     <script src="../js/main.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0f350e5cd0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Jquery -->
+    <script>
+        $(document).ready(function() {
+            let i = 0;
+
+            $(".reponsive-menu-button").click(function() {
+
+                if (i % 2 == 0) {
+                    $(".submenu").css("display", "block");
+                    i = 0;
+                } else {
+                    $(".submenu").css("display", "none");
+
+                }
+                i++;
+            })
+
+        });
+    </script>
     <!-- Header -->
     <div class="header">
         <!-- Logo -->
         <img class="head-logo" src="../img/testLogo2.jpeg" alt="Logo">
         <!-- Menu -->
         <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">News</a>
-            <a href="#">Game</a>
-            <a href="#"><i class="fas fa-bars"></i></a>
+            <a class="reponsive-menu-button"><i class="fas fa-bars"></i></a>
+            <a class="submenu" href="index.html">Home</a>
+            <a class="submenu" href="#">About</a>
+            <a class="submenu" href="#">News</a>
+            <a class="submenu" href="#">Game</a>
+
         </div>
 
         <!-- Night Button -->
-        <label class="switch">
+
+        <div class="dark-mode-switch">
+            <p style="font-size: 11px; display: inline-block; color:grey">Dark Mode</p>
+            <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
-        </label>
+            </label>
+        </div>
+
         <!-- Login -->
         <div class="login">
-            <button>Login</button>
-            <button>Sign up</button>
+            <button class="primary-button">Login</button>
+            <button class="primary-button">Sign up</button>
         </div>
     </div>
     <!-- end Header -->
     <!-- Bodier -->
-    <div>
+    <div class="bodier">
+        <div class="welcome d-flex ">
+            <img class="welcome-img" src="../img/light_ai.gif" alt="welcome">
+            <div class="welcome-text x-center y-center">
+                <h1 class="">Welcome!</h1>
+                <button class="primary-button">Explore<i class="fas fa-search"></i></button>
+                <button class="primary-button">Continue<i class="fas fa-chevron-down"></i></button>
 
+            </div>
+        </div>
     </div>
     <!-- End Bodier -->
     <!-- Footer -->
